@@ -136,6 +136,7 @@ body {
   text-align: center;
   -webkit-transition: 1s;
   transition: 1s;
+  background-color: whitesmoke;
 }
 
 .button-container button:hover {
