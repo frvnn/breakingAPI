@@ -1,9 +1,18 @@
 console.log('Breaking Bad Random Character Card from https://breakingbadapi.com/ made with AXIOS')
 
+// Boton 
+document.addEventListener('click', e => {
+    //console.log(e.target)
+    if (e.target.classList.contains('btn')) {
+        const random = getRandomInt(1,50)
+        fetchData(random)
+    }
+})
+
 // Evento que carga primero el HTML
 
 document.addEventListener('DOMContentLoaded', () => {
-    const random = getRandomInt(1,57)
+    const random = getRandomInt(1,50)
     fetchData(random)
 })
 
@@ -41,6 +50,7 @@ const fetchData = async (id) => {
     console.log(personaje)
 
     const flex = document.querySelector('.flex')
+    flex.innerHTML = ''
     const template = document.getElementById('template-card').content
     const clone = template.cloneNode(true)
     const fragment = document.createDocumentFragment()

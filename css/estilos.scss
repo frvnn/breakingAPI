@@ -3,6 +3,10 @@
     --very-dark-desaturated: hsl(229, 23%, 23%);
     --dark-grayish-blue: hsl(227, 10%, 46%);
     --dark-gray: hsl(0, 0%, 59%);
+    --color2: rgba(255, 0, 0, 0.171);
+    --color1: rgb(2, 102, 54);
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
 }
 
 html {
@@ -15,7 +19,7 @@ box-sizing: inherit;
 
 body {
     font-family: 'Kumbh Sans', sans-serif;
-    background-image: url(/images/bg1.jpg) ;
+    background-image: linear-gradient(var(--color1), var(--color2)), url(/images/bg1.jpg) ;
 /*  background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg'); */
      background-size: cover;
     // background-image: url('../images/image-victor.jpg');
@@ -28,6 +32,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
 }
 
 .card {
@@ -36,6 +41,9 @@ body {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+.animate__animated.animate__bounceInDown {
+        --animate-duration: 2s;
+    }
 
     &-header {
         width: 100%;
@@ -96,4 +104,36 @@ body {
 
     }
 
+}
+
+.button-container {
+    
+
+    button {
+        margin-top: 2rem;
+        padding: 1rem 5rem .7rem;
+        border-radius: 2rem;
+        box-shadow: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border: .7px solid var(--color1);
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        transition: 1s;
+    }
+
+    button:hover {
+        background-color: var(--color1);
+        border: .7px solid var(--dark-gray);
+        color: white;
+        transition: 0.4s;
+    }
+
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 40px;
 }

@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Franco Vanney" />
+	<meta name="title" propiety="og:stie" content="Breaking Bad Custom Cards">
+	<meta name="description" propiety="og:description" content="🧪Breaking Bad Random🧪">
+	<meta name="og:image" propiety="og:image" content="http://127.0.0.1:5500/images/logo.png">
     <title>BreakingBad Random Cards</title>
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
+    <!--VIDEO -->
+<!-- <video onloadedmetadata="this.muted=true" autoplay loop><source src="/images/timelapses.mp4"></video> -->
     <main class="flex"></main>
     <template id="template-card">
-        <article class="card">
+        <img class="logo" src="/images/logo.png" alt="">
+        <article class="card animate__animated animate__bounceIn">
             <img src="./images/bg.jpg" alt="imagen header card" class="card-header">
             <div class="card-body">
                 <img src="./images/image-victor.jpg" alt="imagen de vitoko" class="card-body-img">
@@ -38,6 +47,9 @@
                 </div>
             </div>
         </article>
+        <div class="button-container">
+            <button class="btn">Random</button>
+        </div>
     </template>
 
     <script src="/js/app.js"></script>
