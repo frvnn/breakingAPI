@@ -22,9 +22,8 @@ html {
 
 body {
   font-family: 'Kumbh Sans', sans-serif;
-  background-image: url(/images/over7.png), -webkit-gradient(linear, left top, left bottom, from(var(--color1)), to(var(--color2))), url(/images/bg1.jpg);
-  background-image: url(/images/over7.png), linear-gradient(var(--color1), var(--color2)), url(/images/bg1.jpg);
-  background-blend-mode: multiply;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color1)), to(var(--color2))), url(/images/bg1.jpg);
+  background-image: linear-gradient(var(--color1), var(--color2)), url(/images/bg1.jpg);
   /*  background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg'); */
   background-size: cover;
 }
